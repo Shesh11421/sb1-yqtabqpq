@@ -6,7 +6,23 @@ import { Camera, Check, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { foodTrucks } from '@/lib/dummy-data';
-import { Cuisine } from '@/lib/types';
+// Import Cuisine properly or define it if missing
+// If Cuisine is not properly defined in @/lib/types, let's define it here
+// This is the likely issue - either the import is incorrect or Cuisine is not defined
+
+// Define Cuisine enum if it doesn't exist in imported file
+enum Cuisine {
+  American = "American",
+  Mexican = "Mexican",
+  Italian = "Italian",
+  Asian = "Asian",
+  Mediterranean = "Mediterranean",
+  Indian = "Indian",
+  MiddleEastern = "Middle Eastern",
+  Dessert = "Dessert",
+  Breakfast = "Breakfast",
+  Other = "Other"
+}
 
 const ProfileForm = () => {
   const truck = foodTrucks[0]; // Using the first truck as dummy data
